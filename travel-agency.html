@@ -1,15 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-<meta charset="utf-8"/>
-<title>Travel Agency Page</title>
-<meta name="description" content="in this page you'll find an agency travel that will guide you">
+        <meta charset="utf-8"/>
+        <title>Travel Agency Page</title>
+        <meta name="description" content="in this page you'll find an agency travel that will guide you">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                background-color: #f8f9fa;
+            }
+
+            header {
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                padding: 80px 20px;
+                text-align: center;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            header h1 {
+                font-size: 3.5rem;
+                margin-bottom: 15px;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+
+            header p {
+                font-size: 1.2rem;
+                max-width: 700px;
+                margin: 0 auto;
+                opacity: 0.95;
+            }
+
+            section {
+                max-width: 1200px;
+                margin: 60px auto;
+                padding: 40px 20px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            }
+
+            section:first-of-type {
+                margin-top: 0;
+            }
+
+            section h2 {
+                font-size: 2.5rem;
+                color: #667eea;
+                margin-bottom: 25px;
+                border-bottom: 3px solid #764ba2;
+                padding-bottom: 15px;
+            }
+
+            section p {
+                font-size: 1.1rem;
+                color: #555;
+                line-height: 1.8;
+                margin-bottom: 25px;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+
+            ul li a {
+                display: inline-block;
+                padding: 15px 35px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                text-decoration: none;
+                border-radius: 8px;
+                font-weight: 600;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            }
+
+            ul li a:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(102, 126, 234, 0.5);
+            }
+
+            .itineraries {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            figure {
+                border-radius: 12px;
+                overflow: hidden;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+                background: white;
+            }
+
+            figure:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+            }
+
+            figure img {
+                display: block;
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            figure:hover img {
+                transform: scale(1.05);
+            }
+
+            figcaption {
+                padding: 20px;
+                text-align: center;
+                font-size: 1.1rem;
+                font-weight: 600;
+                color: #667eea;
+                background: linear-gradient(to bottom, transparent, rgba(102, 126, 234, 0.05));
+            }
+
+            a {
+                color: #667eea;
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                header h1 {
+                    font-size: 2.5rem;
+                }
+
+                header p {
+                    font-size: 1rem;
+                }
+
+                section {
+                    padding: 30px 15px;
+                    margin: 40px auto;
+                }
+
+                section h2 {
+                    font-size: 1.8rem;
+                }
+
+                ul li a {
+                    padding: 12px 25px;
+                    font-size: 0.95rem;
+                }
+            }
+        </style>
     </head>
     <body>
-        <section>
-              <h1>Discover Italy</h1>
-              <p>Art, folklore, food, nature, and more. Choose among our wide selection of guided tours and excursions, and live an unforgettable experience exploring Italy.</p>
-        </section>
+        <header>
+            <h1>Discover Italy</h1>
+            <p>Art, folklore, food, nature, and more. Choose among our wide selection of guided tours and excursions, and live an unforgettable experience exploring Italy.</p>
+        </header>
         <section>
             <h2>Packages</h2>
             <p>We offer an extensive range of holiday solutions to accommodate the needs of all our clients. From daily excursions in the most beautiful cities, to thorough tours of hidden villages and medieval towns to discover Italy's lesser-known sides.</p>
@@ -20,18 +183,19 @@
         </section>
         <section>
             <h2>Top Itineraries</h2>
-            <figure>
-               <a href="https://www.heatheronhertravels.com/wp-content/uploads/2014/01/Colisseum.jpg" target="_blank"><img src="https://www.heatheronhertravels.com/wp-content/uploads/2014/01/Colisseum.jpg" alt="Rome and Center Italy"></a>
-                <figcaption>Rome and Center Italy</figcaption>
-            </figure>
-            <figure>     
-                <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF4je4HOtIBoFvTJWvPFDyietSfe7tXQz6A&s" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF4je4HOtIBoFvTJWvPFDyietSfe7tXQz6A&s" alt="Nature and national parks"></a>
-                <figcaption>Nature and National Parks</figcaption>
-            </figure>
-            <figure>             
-                <a href="https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=800/https://cstad.s3.ap-southeast-2.amazonaws.com/6065_South_Italy_Malta_and_Greek_Islands_WEB_HERO_4_Capri_Faraglioni.jpg" target="_blank"><img src="https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=800/https://cstad.s3.ap-southeast-2.amazonaws.com/6065_South_Italy_Malta_and_Greek_Islands_WEB_HERO_4_Capri_Faraglioni.jpg" alt="South Italy and Islands"></a>
-                <figcaption>South Italy and Islands</figcaption>
-            </figure>
-        </section>
+            <div class="itineraries">
+                <figure>
+                   <a href="https://www.heatheronhertravels.com/wp-content/uploads/2014/01/Colisseum.jpg" target="_blank"><img src="https://www.heatheronhertravels.com/wp-content/uploads/2014/01/Colisseum.jpg" alt="Rome and Center Italy"></a>
+                    <figcaption>Rome and Center Italy</figcaption>
+                </figure>
+                <figure>     
+                    <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF4je4HOtIBoFvTJWvPFDyietSfe7tXQz6A&s" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvF4je4HOtIBoFvTJWvPFDyietSfe7tXQz6A&s" alt="Nature and national parks"></a>
+                    <figcaption>Nature and National Parks</figcaption>
+                </figure>
+                <figure>             
+                    <a href="https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=800/https://cstad.s3.ap-southeast-2.amazonaws.com/6065_South_Italy_Malta_and_Greek_Islands_WEB_HERO_4_Capri_Faraglioni.jpg" target="_blank"><img src="https://images.tripadeal.com.au/cdn-cgi/image/format=auto,width=800/https://cstad.s3.ap-southeast-2.amazonaws.com/6065_South_Italy_Malta_and_Greek_Islands_WEB_HERO_4_Capri_Faraglioni.jpg" alt="South Italy and Islands"></a>
+                    <figcaption>South Italy and Islands</figcaption>
+                </figure>
+            </div>
     </body>
 </html>
